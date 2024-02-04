@@ -4,12 +4,11 @@ import '@testing-library/jest-dom/extend-expect';
 import { Input } from '../todo/components/input';
 
 test('renders input field with placeholder and label', () => {
-  const { getByPlaceholderText, getByLabelText } = render(<Input placeholder="Enter text" label="Input Label" />);
-  const input = getByPlaceholderText('Enter text');
-  const label = getByLabelText('Input Label');
+  const { getByPlaceholderText, getByLabelText, getByTestId } = render(<Input placeholder="Enter text" label="Input Label" />);
 
-  expect(input).toBeInTheDocument();
-  expect(label).toBeInTheDocument();
+  expect(getByPlaceholderText("Enter text")).toBeInTheDocument();
+  expect(getByTestId('text-input')).toBeInTheDocument();
+  expect(getByLabelText('Input Label')).toBeInTheDocument();
 });
 
 test('calls onSubmit when Enter key is pressed with valid input', () => {
