@@ -1,8 +1,8 @@
 ## Component Testing Plan and documentation
 
-Hello and wellcome, Welcome to the testing documentation for Todo app in react
+Hello and wellcome, Welcome to the testing plan and documentation for Todo app in react
 
-Tools used are jest and RTL
+Tools used are jest and RTL and the test can be found inside src/test
 
 ## Footer Component Testing
 <details>
